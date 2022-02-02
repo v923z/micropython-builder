@@ -18,11 +18,11 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
-      - name: Install arm toolchain
-        run: ./scripts/install_arm.sh
-
       - name: Checkout builder
         uses: actions/checkout@v1
+
+      - name: Install arm toolchain
+        run: ./scripts/install_arm.sh
 
       - name: Checkout ulab/micropython
         run: ./scripts/init.sh
