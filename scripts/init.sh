@@ -38,6 +38,14 @@ upython_hash=`cd micropython; git rev-parse --short HEAD; cd ..`
 # the cross-compiler is required for each build, so we might as well get it over with
 make ${MAKEOPTS} -C micropython/mpy-cross
 
+# chose a delimiter that is not probable to turn up in the description of the file
+write_platforms_list() {
+    if [ -f "platforms.md" ]; then
+        echo $1"| "$1-$upython_hash-$ulab_hash$ext"| " $2 >> ./platforms.list
+    echo
+    fi
+}
+
 # helper function to move the binary file from the build directory a temporary folder (./artifacts)
 copy_files() {
     if [ -d "./artifacts" ]; then

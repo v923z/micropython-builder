@@ -7,6 +7,6 @@
 
 source ./scripts/init.sh
 
-make ${MAKEOPTS} -C micropython/ports/stm32 BOARD=PYBV11 USER_C_MODULES=../../../ulab all
-copy_files stm32/build-PYBV11/firmware.dfu pybv11
-clean_up stm32 build-PYBV11
+make ${MAKEOPTS} -C micropython/ports/stm32 BOARD=PYBD_SF6 USER_C_MODULES=../../../ulab all
+copy_files stm32/build-PYBD_SF6/firmware.dfu pybd_sf6
+clean_up stm32 build-PYBD_SF6
