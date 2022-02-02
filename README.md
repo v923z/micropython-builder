@@ -20,6 +20,8 @@ github features and actions, but this approach results in build steps that can e
 computer. We hope that by offering the community build scripts that are proven to run on a freshly
 installed system, much frustration can be avoided.
 
+[Contents](#contents)
+
 ## Platforms and firmware
 
 Unless otherwise specified, firmware is built with default settings (i.e., those given in the mpconfigboad.h file),
@@ -30,6 +32,8 @@ Each binary file is named after the board on which it is supposed to run, and, i
 git hash of `micropython`, and the short git hash of `ulab`, so that by inspecting the name of the binary, it is always
 possible to determine, which [micropython](https://github.com/micropython/micropython/commits/master), and
 [ulab](https://github.com/v923z/micropython-ulab/commits/master) commits, respectively, are included.
+
+[Contents](#contents)
 
 ## Contributing and issues
 
@@ -47,3 +51,5 @@ This should trigger the job to run. Your script should complete without errors, 
 you should see the artifacts listed. Once you are satisfied with the results, you can open a pull request against
 this repository.
 
+
+[Contents](#contents)
