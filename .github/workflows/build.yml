@@ -47,10 +47,6 @@ jobs:
         if: always()
         run: ./scripts/pybv11.sh
 
-      - name: Compile for pca10040
-        if: always()
-        run: ./scripts/pca10040.sh
-
       - name: Compile for raspberry py nano
         if: always()
         run: ./scripts/rp2040.sh
