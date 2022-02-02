@@ -1,0 +1,39 @@
+name: Workflow template
+
+on:
+  push:
+  pull_request:
+    branches:
+      - testing
+    paths:
+    - '.github/workflows/*.yml'
+    - './scripts/*.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Install arm toolchain
+        run: ./scripts/install_arm.sh
+
+      - name: Checkout builder
+        uses: actions/checkout@v1
+
+      - name: Checkout ulab/micropython
+        run: ./scripts/init.sh
+
+      - name: Create artifacts directory
+        run: mkdir ./artifacts
+
+      # this section is only for test purposes
+      # - name: Compile X_X_X port
+      #   if: always()
+      #   run: ./scripts/x_x_x.sh
+
+      - name: List artifacts directory
+        run: ls ./artifacts/* -l
