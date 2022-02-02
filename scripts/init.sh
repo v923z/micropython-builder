@@ -44,7 +44,7 @@ copy_files() {
         echo "copying firmware"
         stem=`basename $1`
         ext=$([[ "$stem" = *.* ]] && echo ".${stem##*.}" || echo '')
-        mv micropython/ports/$1 ./data/$2-$upython_hash-$ulab_hash$ext
+        mv micropython/ports/$1 ./artifacts/$2-$upython_hash-$ulab_hash$ext
     fi
 }
 
