@@ -5,6 +5,7 @@ Bleeding edge `micropython` firmware with `ulab` included.
 
 1. [Overview](#overview)
 1. [Platforms and firmware](#platforms-and-firmware)
+1. [Compiling locally](#compiling-locally)
 1. [Contributing and issues](#contributing-and-issues)
     1. [Testing the build process on github](#testing-the-build-process-on-github)
 
@@ -31,11 +32,36 @@ might be reduced, complex support might be switched off, and certain functions m
 Compilation details, pre-processor switches etc., can always be read out of the corresponding build script. Again,
 the build scripts are the only place holding information on the binary output.
 
-Each firmware file is named after the board on which it is supposed to run, and, in addition, the binary contains 
-the short git hash of `micropython` (in `micropython`'s welcome prompt), and the short git hash of `ulab` 
-(in the `ulab.__sha__` variable). Hence, it is always possible to determine, 
+Each firmware file is named after the board on which it is supposed to run, and, in addition, the binary contains
+the short git hash of `micropython` (in `micropython`'s welcome prompt), and the short git hash of `ulab`
+(in the `ulab.__sha__` variable). Hence, it is always possible to determine,
 which [micropython](https://github.com/micropython/micropython/commits/master), and
 [ulab](https://github.com/v923z/micropython-ulab/commits/master) commits, respectively, are included.
+
+[Contents](#contents)
+
+## Compiling locally
+
+If you would like to compile (or customise) the firmware on a local machine, all you have to do is clone this repository
+with
+
+```bash
+git clone https://github.com/v923z/micropython-builder.git
+```
+
+then
+
+```bash
+cd micropython-builder
+```
+
+and there run
+
+```bash
+./scripts/some_port/some_board.sh
+```
+
+The rest is taken care of.
 
 [Contents](#contents)
 
