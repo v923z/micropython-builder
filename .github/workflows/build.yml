@@ -49,7 +49,11 @@ jobs:
 
       - name: Compile for raspberry py nano
         if: always()
-        run: ./scripts/rp2/rp2040.sh
+        run: ./scripts/rp2/arduino_nano_connect.sh
+
+      - name: Compile for raspberry py pici
+        if: always()
+        run: ./scripts/rp2/pico.sh
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
