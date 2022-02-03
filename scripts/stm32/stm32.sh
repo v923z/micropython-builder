@@ -7,6 +7,8 @@
 
 source ./scripts/init.sh
 
-make ${MAKEOPTS} -C micropython/ports/stm32 BOARD=PYBV10 USER_C_MODULES=../../../ulab all
-copy_files stm32/build-PYBV10/firmware.dfu pybv10
-clean_up stm32 build-PYBV10
+build_stm32() {
+    make ${MAKEOPTS} -C micropython/ports/stm32 BOARD=$1 USER_C_MODULES=../../../ulab all
+    copy_files stm32/build-$1/firmware.dfu $1
+    clean_up stm32 build-$1
+}

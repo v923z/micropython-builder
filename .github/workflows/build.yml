@@ -37,19 +37,23 @@ jobs:
 
       - name: Compile for PYBD_SF6
         if: always()
-        run: ./scripts/pybd_sf6.sh
+        run: ./scripts/stm32/pybd_sf6.sh
 
       - name: Compile for pybv10 board
         if: always()
-        run: ./scripts/pybv10.sh
+        run: ./scripts/stm32/pybv10.sh
 
       - name: Compile for pybv11 board
         if: always()
-        run: ./scripts/pybv11.sh
+        run: ./scripts/stm32/pybv11.sh
 
       - name: Compile for raspberry py nano
         if: always()
-        run: ./scripts/rp2040.sh
+        run: ./scripts/rp2/arduino_nano_connect.sh
+
+      - name: Compile for raspberry py pici
+        if: always()
+        run: ./scripts/rp2/pico.sh
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
