@@ -5,6 +5,6 @@
 #  The MIT License (MIT)
 #  Copyright (c) 2022 Zoltán Vörös
 
-source ./scripts/stm32/stm32.sh
+source ./scripts/rp2/rp2.sh
 
-build_stm32 "PYBV11"
+build_rp2 "PICO"
