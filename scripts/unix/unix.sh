@@ -8,7 +8,7 @@
 source ./scripts/init.sh
 
 make ${MAKEOPTS} -C micropython/ports/unix axtls
-make ${MAKEOPTS} -C micropython/ports/unix USER_C_MODULES=../../../ulab DEBUG=1 STRIP=: MICROPY_PY_FFI=0 MICROPY_PY_BTREE=0
+make ${MAKEOPTS} -C micropython/ports/unix USER_C_MODULES=../../../ulab DEBUG=1 STRIP=: MICROPY_PY_FFI=0 MICROPY_PY_BTREE=0 CFLAGS_EXTRA=-DULAB_HASH=$ulab_hash
 
 copy_files unix/micropython unix
 clean_up unix build-standard

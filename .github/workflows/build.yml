@@ -51,7 +51,7 @@ jobs:
         if: always()
         run: ./scripts/rp2/arduino_nano_connect.sh
 
-      - name: Compile for raspberry py pici
+      - name: Compile for raspberry py pico
         if: always()
         run: ./scripts/rp2/pico.sh
 
