@@ -32,8 +32,8 @@ git clone https://github.com/micropython/micropython-lib || git -C micropython-l
 
 
 # create hashes, which will be appended to the output file names
-ulab_hash=`cd ulab; git rev-parse --short HEAD; cd ..`
-upython_hash=`cd micropython; git rev-parse --short HEAD; cd ..`
+ulab_hash=`cd ulab; git describe --abbrev=8 --always; cd ..`
+upython_hash=`cd micropython; git describe --abbrev=8 --always; cd ..`
 
 # the cross-compiler is required for each build, so we might as well get it over with
 make ${MAKEOPTS} -C micropython/mpy-cross
@@ -52,7 +52,7 @@ copy_files() {
         echo "copying firmware"
         stem=`basename $1`
         ext=$([[ "$stem" = *.* ]] && echo ".${stem##*.}" || echo '')
-        mv micropython/ports/$1 ./artifacts/$2-$upython_hash-$ulab_hash$ext
+        mv micropython/ports/$1 ./artifacts/$2$ext
     fi
 }
 
