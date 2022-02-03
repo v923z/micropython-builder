@@ -31,9 +31,10 @@ might be reduced, complex support might be switched off, and certain functions m
 Compilation details, pre-processor switches etc., can always be read out of the corresponding build script. Again,
 the build scripts are the only place holding information on the binary output.
 
-Each firmware file is named after the board on which it is supposed to run, and, in addition, contains the short
-git hash of `micropython`, and the short git hash of `ulab`. Hence, by inspecting the name of the binary, it is always
-possible to determine, which [micropython](https://github.com/micropython/micropython/commits/master), and
+Each firmware file is named after the board on which it is supposed to run, and, in addition, the binary contains 
+the short git hash of `micropython` (in `micropython`'s welcome prompt), and the short git hash of `ulab` 
+(in the `ulab.__sha__` variable). Hence, it is always possible to determine, 
+which [micropython](https://github.com/micropython/micropython/commits/master), and
 [ulab](https://github.com/v923z/micropython-ulab/commits/master) commits, respectively, are included.
 
 [Contents](#contents)
