@@ -36,7 +36,13 @@ Each firmware file is named after the board on which it is supposed to run, and,
 the short git hash of `micropython` (in `micropython`'s welcome prompt), and the short git hash of `ulab`
 (in the `ulab.__sha__` variable). Hence, it is always possible to determine,
 which [micropython](https://github.com/micropython/micropython/commits/master), and
-[ulab](https://github.com/v923z/micropython-ulab/commits/master) commits, respectively, are included.
+[ulab](https://github.com/v923z/micropython-ulab/commits/master) commits, respectively, are included by looking at the 
+`micropython` welcome prompt, and then 
+
+```python
+import ulab
+ulab.__sha__
+```
 
 [Contents](#contents)
 
