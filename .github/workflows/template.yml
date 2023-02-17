@@ -31,9 +31,9 @@ jobs:
         run: mkdir ./artifacts
 
       # this section is only for test purposes
-      # - name: Compile X_X_X port
-      #   if: always()
-      #   run: ./scripts/x_x_x.sh
+      - name: Compile PICO_W port
+        if: always()
+        run: ./scripts/rp2/pico_w.sh
 
       - name: List artifacts directory
         run: ls ./artifacts/* -l
