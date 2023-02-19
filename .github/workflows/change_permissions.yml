@@ -36,4 +36,4 @@ jobs:
           echo test, and deploy your project.
           
       - name: Change permission
-        run: git update-index --chmod=+x ./.github/scripts/rp2/pico_w.sh
+        run: git update-index --chmod=+x ./scripts/rp2/pico_w.sh
