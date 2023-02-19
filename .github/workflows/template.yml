@@ -34,6 +34,11 @@ jobs:
       # - name: Compile X_X_X port
       #   if: always()
       #   run: ./scripts/x_x_x.sh
+      
+      # Testing Pico W port
+      - name: Compile Pico W port
+      if: always()
+      run: ./scripts/rp2/pico_w.sh
 
       - name: List artifacts directory
         run: ls ./artifacts/* -l
