@@ -4,7 +4,7 @@
 #  https://github.com/v923z/micropython-builder
 #  The MIT License (MIT)
 #  Copyright (c) 2022 Zoltán Vörös
-#  16.2.2023, sakluk: Added new port for Pico W
+#  20.2.2023, sakluk: Added new port for Pico W
 
 source ./scripts/rp2/rp2.sh
 
