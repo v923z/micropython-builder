@@ -24,6 +24,9 @@ jobs:
       - name: Install arm toolchain
         run: ./scripts/install_arm.sh
 
+      - name: Install ESP-IDF toolchain
+        run: ./scripts/install_espidf.sh
+
       - name: Checkout ulab/micropython
         run: ./scripts/init.sh
 
