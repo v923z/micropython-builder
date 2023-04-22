@@ -18,11 +18,14 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
+      - name: Checkout builder
+        uses: actions/checkout@v1
+
       - name: Install arm toolchain
         run: ./scripts/install_arm.sh
 
-      - name: Checkout builder
-        uses: actions/checkout@v1
+      - name: Install ESP-IDF toolchain
+        run: ./scripts/install_espidf.sh
 
       - name: Checkout ulab/micropython
         run: ./scripts/init.sh
@@ -34,6 +37,14 @@ jobs:
       # - name: Compile X_X_X port
       #   if: always()
       #   run: ./scripts/x_x_x.sh
+
+      - name: Compile for ESP32 GENERIC port
+        if: always()
+        run: ./scripts/esp32/generic.sh
+
+      - name: Compile for ESP32 GENERIC port
+        if: always()
+        run: ./scripts/esp32/s3.sh
 
       - name: List artifacts directory
         run: ls ./artifacts/* -l
