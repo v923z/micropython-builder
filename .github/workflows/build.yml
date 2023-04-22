@@ -79,6 +79,14 @@ jobs:
         if: always()
         run: ./scripts/stm32/pybv11.sh
 
+      - name: Compile for ESP32 GENERIC 
+        if: always()
+        run: ./scripts/esp32/generic.sh
+
+      - name: Compile for ESP32 S3
+        if: always()
+        run: ./scripts/esp32/s3.sh
+
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"

@@ -38,13 +38,5 @@ jobs:
       #   if: always()
       #   run: ./scripts/x_x_x.sh
 
-      - name: Compile for ESP32 GENERIC port
-        if: always()
-        run: ./scripts/esp32/generic.sh
-
-      - name: Compile for ESP32 GENERIC port
-        if: always()
-        run: ./scripts/esp32/s3.sh
-
       - name: List artifacts directory
         run: ls ./artifacts/* -l
