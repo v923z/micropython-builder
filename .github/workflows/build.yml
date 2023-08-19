@@ -58,15 +58,19 @@ jobs:
         if: always()
         run: ./scripts/rp2/pimoroni_picolipo_16MB.sh
 
-      - name: Compile for raspberry py nano
+      - name: Compile for raspberry nano
         if: always()
         run: ./scripts/rp2/arduino_nano_connect.sh
 
-      - name: Compile for raspberry py pico
+      - name: Compile for raspberry pico
         if: always()
         run: ./scripts/rp2/pico.sh
 
-      - name: Compile for raspberry py pico W
+      - name: Compile for raspberry pico with UART and VFAT support
+        if: always()
+        run: ./scripts/rp2/pico_uart_vfat.sh
+
+      - name: Compile for raspberry pico W
         if: always()
         run: ./scripts/rp2/pico_w.sh
 
