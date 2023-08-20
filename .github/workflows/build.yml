@@ -62,9 +62,9 @@ jobs:
       #   if: always()
       #   run: ./scripts/rp2/arduino_nano_connect.sh
 
-      - name: Compile for raspberry pico
-        if: always()
-        run: ./scripts/rp2/pico.sh
+      # - name: Compile for raspberry pico
+      #   if: always()
+      #   run: ./scripts/rp2/pico.sh
 
       - name: Compile for raspberry pico with UART and VFAT support
         if: always()
