@@ -7,4 +7,4 @@
 
 source ./scripts/rp2/rp2.sh
 
-build_rp2 "RPI-PICO"
+build_rp2 "RPI_PICO"

@@ -8,4 +8,4 @@
 
 source ./scripts/rp2/rp2.sh
 
-build_rp2 "RPI-PICO_W"
+build_rp2 "RPI_PICO_W"
