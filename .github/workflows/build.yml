@@ -86,13 +86,17 @@ jobs:
         if: always()
         run: ./scripts/stm32/pybv11.sh
 
-      - name: Compile for ESP32 GENERIC 
+      - name: Compile for ESP32 GENERIC C3 
         if: always()
-        run: ./scripts/esp32/generic.sh
+        run: ./scripts/esp32/generic-c3.sh
+
+      - name: Compile for ESP32 S2
+        if: always()
+        run: ./scripts/esp32/generic-s2.sh
 
       - name: Compile for ESP32 S3
         if: always()
-        run: ./scripts/esp32/s3.sh
+        run: ./scripts/esp32/generic-s3.sh
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:

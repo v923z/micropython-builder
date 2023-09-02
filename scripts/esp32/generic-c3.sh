@@ -8,4 +8,4 @@
 
 source ./scripts/esp32/esp32.sh
 
-build_esp32 "GENERIC_S3"
+build_esp32 "ESP_GENERIC"
