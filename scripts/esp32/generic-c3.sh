@@ -8,4 +8,4 @@
 
 source ./scripts/esp32/esp32.sh
 
-build_esp32 "ESP_GENERIC"
+build_esp32 "ESP32_GENERIC_C3"
