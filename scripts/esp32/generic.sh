@@ -5,6 +5,7 @@
 #  The MIT License (MIT)
 #  Copyright (c) 2022 Zoltán Vörös
 #                2023 Zach Moshe
+#                2023 Ganer
 
 source ./scripts/esp32/esp32.sh
 
