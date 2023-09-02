@@ -8,15 +8,21 @@
 source ./scripts/init.sh
 
 build_rp2() {
+    make ${MAKEOPTS} -C ports/rp2 submodules
+    make ${MAKEOPTS} -C ports/rp2
+    make ${MAKEOPTS} -C ports/rp2 BOARD=$1 submodules
     make ${MAKEOPTS} -C micropython/ports/rp2 BOARD=$1 USER_C_MODULES=../../../ulab/code/micropython.cmake CFLAGS_EXTRA=-DULAB_HASH=$ulab_hash
     copy_files rp2/build-$1/firmware.uf2 $1
     clean_up rp2 build-$1
 }
 
 build_rp2_uart_vfat() {
-    MICROPY_HW_ENABLE_UART_REPL=1
-    MICROPY_HW_USB_MSC=1
+    # hot-patch the config file here
+    cp ./scripts/rp2/mpconfigport.h.patch.uart_vfat ./micropython/ports/rp2/boards/RPI_PICO/mpconfigport.h
+    make ${MAKEOPTS} -C ports/rp2 submodules
+    make ${MAKEOPTS} -C ports/rp2
+    make ${MAKEOPTS} -C ports/rp2 BOARD=$1 submodules
     make ${MAKEOPTS} -C micropython/ports/rp2 BOARD=$1 USER_C_MODULES=../../../ulab/code/micropython.cmake CFLAGS_EXTRA=-DULAB_HASH=$ulab_hash 
-    copy_files rp2/build-$1/firmware.uf2 "$1"_UART_VFAT
+    copy_files rp2/build-$1/firmware.uf2 "$1"-UART-VFAT
     clean_up rp2 build-$1
 }

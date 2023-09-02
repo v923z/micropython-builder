@@ -7,4 +7,4 @@
 
 source ./scripts/rp2/rp2.sh
 
-build_rp2_uart_vfat "PICO"
+build_rp2_uart_vfat "RPI_PICO"
