@@ -9,4 +9,4 @@
 
 source ./scripts/esp32/esp32.sh
 
-build_esp32 "GENERIC_UNICORE"
+build_esp32 "ESP32_GENERIC_UNICORE"
