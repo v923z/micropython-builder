@@ -102,7 +102,7 @@ jobs:
       #   if: always()
       #   run: ./scripts/esp32/generic-s3.sh
 
-      - name: Compile for ESP32 S3
+      - name: Compile for ESP32 UNICORE
         if: always()
         run: ./scripts/esp32/unicore.sh
 
