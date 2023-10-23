@@ -36,7 +36,7 @@ jobs:
       # this section is only for test purposes
       # - name: Compile unix port
       #   if: always()
-      #   run: ./scripts/unix.sh
+      # #   run: ./scripts/unix.sh
 
       - name: Compile for Adafruit Feather RP2040
         if: always()
@@ -101,6 +101,10 @@ jobs:
       - name: Compile for ESP32 S3
         if: always()
         run: ./scripts/esp32/generic-s3.sh
+
+      - name: Compile for ESP32 UNICORE
+        if: always()
+        run: ./scripts/esp32/unicore.sh
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
