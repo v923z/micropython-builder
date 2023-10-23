@@ -8,5 +8,7 @@
 #                2023 Ganer
 
 source ./scripts/esp32/esp32.sh
+source esp-idf/export.sh
 
-build_esp32 "ESP32-SOLO-1"
+make ${MAKEOPTS} -C micropython/ports/esp32 BOARD=ESP32_GENERIC BOARD_VARIANT=UNICORE USER_C_MODULES=../../../../ulab/code/micropython.cmake CFLAGS_EXTRA=-DULAB_HASH=$ulab_hash
+mv micropython/ports/esp32/build-generic/firmware.bin ./artifacts/ESP32_UNICORE.bin
