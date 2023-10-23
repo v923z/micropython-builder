@@ -11,4 +11,4 @@ source ./scripts/esp32/esp32.sh
 source esp-idf/export.sh
 
 make ${MAKEOPTS} -C micropython/ports/esp32 BOARD=ESP32_GENERIC BOARD_VARIANT=UNICORE USER_C_MODULES=../../../../ulab/code/micropython.cmake CFLAGS_EXTRA=-DULAB_HASH=$ulab_hash
-mv micropython/ports/esp32/build-generic/firmware.bin ./artifacts/ESP32_UNICORE.bin
+mv micropython/ports/esp32/build-ESP32_GENERIC-UNICORE/micropython.bin ./artifacts/ESP32_UNICORE.bin
