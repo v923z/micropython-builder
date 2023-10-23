@@ -38,69 +38,69 @@ jobs:
       #   if: always()
       # #   run: ./scripts/unix.sh
 
-      # - name: Compile for Adafruit Feather RP2040
-      #   if: always()
-      #   run: ./scripts/rp2/adafruit_feather_rp2040.sh
+      - name: Compile for Adafruit Feather RP2040
+        if: always()
+        run: ./scripts/rp2/adafruit_feather_rp2040.sh
 
-      # - name: Compile for Adafruit Itsybitsy RP2040
-      #   if: always()
-      #   run: ./scripts/rp2/adafruit_itsybitsy_rp2040.sh
+      - name: Compile for Adafruit Itsybitsy RP2040
+        if: always()
+        run: ./scripts/rp2/adafruit_itsybitsy_rp2040.sh
 
-      # - name: Compile for Adafruit QTPY RP2040
-      #   if: always()
-      #   run: ./scripts/rp2/adafruit_qtpy_rp2040.sh
+      - name: Compile for Adafruit QTPY RP2040
+        if: always()
+        run: ./scripts/rp2/adafruit_qtpy_rp2040.sh
 
-      # - name: Compile for Pimoroni Pico Lipo 4MB
-      #   if: always()
-      #   run: ./scripts/rp2/pimoroni_picolipo_4MB.sh
+      - name: Compile for Pimoroni Pico Lipo 4MB
+        if: always()
+        run: ./scripts/rp2/pimoroni_picolipo_4MB.sh
 
-      # - name: Compile for Pimoroni Pico Lipo 16MB
-      #   if: always()
-      #   run: ./scripts/rp2/pimoroni_picolipo_16MB.sh
+      - name: Compile for Pimoroni Pico Lipo 16MB
+        if: always()
+        run: ./scripts/rp2/pimoroni_picolipo_16MB.sh
 
-      # - name: Compile for raspberry nano
-      #   if: always()
-      #   run: ./scripts/rp2/arduino_nano_connect.sh
+      - name: Compile for raspberry nano
+        if: always()
+        run: ./scripts/rp2/arduino_nano_connect.sh
 
-      # - name: Compile for raspberry pico
-      #   if: always()
-      #   run: ./scripts/rp2/pico.sh
+      - name: Compile for raspberry pico
+        if: always()
+        run: ./scripts/rp2/pico.sh
 
-      # - name: Compile for raspberry pico with UART and VFAT support
-      #   if: always()
-      #   run: ./scripts/rp2/pico_uart_vfat.sh
+      - name: Compile for raspberry pico with UART and VFAT support
+        if: always()
+        run: ./scripts/rp2/pico_uart_vfat.sh
 
-      # - name: Compile for raspberry pico W
-      #   if: always()
-      #   run: ./scripts/rp2/pico_w.sh
+      - name: Compile for raspberry pico W
+        if: always()
+        run: ./scripts/rp2/pico_w.sh
 
-      # - name: Compile for PYBD_SF6
-      #   if: always()
-      #   run: ./scripts/stm32/pybd_sf6.sh
+      - name: Compile for PYBD_SF6
+        if: always()
+        run: ./scripts/stm32/pybd_sf6.sh
 
-      # - name: Compile for pybv10 board
-      #   if: always()
-      #   run: ./scripts/stm32/pybv10.sh
+      - name: Compile for pybv10 board
+        if: always()
+        run: ./scripts/stm32/pybv10.sh
 
-      # - name: Compile for pybv11 board
-      #   if: always()
-      #   run: ./scripts/stm32/pybv11.sh
+      - name: Compile for pybv11 board
+        if: always()
+        run: ./scripts/stm32/pybv11.sh
 
-      # - name: Compile for ESP32 GENERIC 
-      #   if: always()
-      #   run: ./scripts/esp32/generic.sh
+      - name: Compile for ESP32 GENERIC 
+        if: always()
+        run: ./scripts/esp32/generic.sh
 
-      # - name: Compile for ESP32 GENERIC C3 
-      #   if: always()
-      #   run: ./scripts/esp32/generic-c3.sh
+      - name: Compile for ESP32 GENERIC C3 
+        if: always()
+        run: ./scripts/esp32/generic-c3.sh
 
-      # - name: Compile for ESP32 S2
-      #   if: always()
-      #   run: ./scripts/esp32/generic-s2.sh
+      - name: Compile for ESP32 S2
+        if: always()
+        run: ./scripts/esp32/generic-s2.sh
 
-      # - name: Compile for ESP32 S3
-      #   if: always()
-      #   run: ./scripts/esp32/generic-s3.sh
+      - name: Compile for ESP32 S3
+        if: always()
+        run: ./scripts/esp32/generic-s3.sh
 
       - name: Compile for ESP32 UNICORE
         if: always()
