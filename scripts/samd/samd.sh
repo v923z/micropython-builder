@@ -9,6 +9,6 @@ source ./scripts/init.sh
 
 build_samd() {
     make ${MAKEOPTS} -C micropython/ports/samd BOARD=$1 USER_C_MODULES=../../../ulab all CFLAGS_EXTRA="-DULAB_HASH_STRING=$ulab_hash -DULAB_SUPPORTS_COMPLEX=0"
-    copy_files samd/build-$1/firmware.dfu $1
+    copy_files samd/build-$1/firmware.uf2 $1
     clean_up samd build-$1
 }
