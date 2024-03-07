@@ -102,9 +102,14 @@ jobs:
         if: always()
         run: ./scripts/esp32/generic-s3.sh
 
-      - name: Compile for ESP32 UNICORE
+      # Take this out for now
+      # - name: Compile for ESP32 UNICORE
+      #   if: always()
+      #   run: ./scripts/esp32/unicore.sh
+
+      - name: Compile for Sparkfun SAMD51 Thing Plus
         if: always()
-        run: ./scripts/esp32/unicore.sh
+        run: ./scripts/samd/sparkfun_thing_plus.sh
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
