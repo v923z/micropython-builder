@@ -111,6 +111,10 @@ jobs:
         if: always()
         run: ./scripts/samd/sparkfun_thing_plus.sh
 
+      - name: Compile for Teensy 41
+        if: always()
+        run: ./scripts/mimxrt/teensy41.sh
+
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
