@@ -1,0 +1,28 @@
+name: Workflow template
+
+on:
+  push:
+  pull_request:
+    branches:
+      - testing
+    paths:
+    - './scripts/init2.sh'
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Checkout builder
+        uses: actions/checkout@v1
+
+      - name: Create artifacts directory
+        run: mkdir ./artifacts
+
+      - name: Compile for pyboard v11
+        if: always()
+        run: source init2.sh && build_stm32 "PYBV11"
