@@ -74,6 +74,14 @@ jobs:
         if: always()
         run: ./scripts/rp2/pico_w.sh
 
+      - name: Compile for raspberry pico 2
+        if: always()
+        run: ./scripts/rp2/pico2.sh
+
+      - name: Compile for raspberry pico 2W
+        if: always()
+        run: ./scripts/rp2/pico2_w.sh
+
       - name: Compile for PYBD_SF6
         if: always()
         run: ./scripts/stm32/pybd_sf6.sh
