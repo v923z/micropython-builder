@@ -5,6 +5,7 @@
 #  The MIT License (MIT)
 #  Copyright (c) 2022 Zoltán Vörös
 
+#  This file is run for the raspberry pico 2 series
 
 # set-up and housekeeping utilities
 
