@@ -5,7 +5,10 @@
 #  The MIT License (MIT)
 #  Copyright (c) 2022 Zoltán Vörös
 
-#  This file is run for the raspberry pico 2 series
+#  This file is adapted from init.sh
+#  It is run for the raspberry pico 2 series
+#  It relies on v1.26.0 of micropython
+#  Contributed by: Jayanth Damodaran    Last Modified: 9/6/25
 
 # set-up and housekeeping utilities
 
