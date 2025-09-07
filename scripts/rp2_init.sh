@@ -5,6 +5,7 @@
 #  The MIT License (MIT)
 #  Copyright (c) 2022 Zoltán Vörös
 
+#  This file is run for the raspberry pico 2 series
 
 # set-up and housekeeping utilities
 
@@ -22,6 +23,7 @@ git clone https://github.com/v923z/micropython-ulab ulab || git -C ulab pull
 
 # only check out micropython, if it is not available locally, otherwise, pull
 git clone https://github.com/micropython/micropython micropython || git -C micropython pull
+git -C micropython checkout v1.26.0
 
 cd micropython
 git submodule update --init lib/tinyusb

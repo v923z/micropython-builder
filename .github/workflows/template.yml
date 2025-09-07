@@ -2,6 +2,8 @@ name: Workflow template
 
 on:
   push:
+    branches:
+      - master
   pull_request:
     branches:
       - testing
