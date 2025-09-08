@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: "0 3 */2 * *"
   push:
+    branches:
+        - master
   pull_request:
     paths:
     - '.github/workflows/*.yml'
@@ -73,6 +75,14 @@ jobs:
       - name: Compile for raspberry pico W
         if: always()
         run: ./scripts/rp2/pico_w.sh
+
+      - name: Compile for raspberry pico 2
+        if: always()
+        run: ./scripts/rp2/pico2.sh
+
+      - name: Compile for raspberry pico 2W
+        if: always()
+        run: ./scripts/rp2/pico2_w.sh
 
       - name: Compile for PYBD_SF6
         if: always()

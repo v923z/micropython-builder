@@ -87,10 +87,11 @@ Issues concerning `micropython`, or `ulab` themselves should be opened in their 
 If you have a script that compiles the firmware on the local computer, you can easily test it on github.
 All you have to do is fork this repository, and create a branch called `testing` on your copy. In
 `.github/workflows/template.yml`, add a section with a link to your script, and create a pull request
-against your `master` branch. This should trigger the job to run. Your script should complete without
-errors, and at the end of the workflow run, you should see the artifacts listed. Once you are satisfied
-with the results, you can modify the `.github/workflows/build.yml` file to include the new section, and
-open a pull request against this repository.
+against your `master` branch. Make sure you go to the Actions tab and enable workflows including binary 
+builds first. Otherwise, the job will not automatically trigger when you creat the pull request. Your 
+script should complete without errors, and at the end of the workflow run, you should see the artifacts 
+listed. Once you are satisfied with the results, you can modify the `.github/workflows/build.yml` file 
+to include the new section, and open a pull request against this repository.
 
 
 [Contents](#contents)
